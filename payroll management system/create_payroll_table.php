@@ -10,6 +10,7 @@ $sql = "CREATE TABLE IF NOT EXISTS departments (
     dep_head VARCHAR(200) NOT NULL,
     employee_count INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    dep_description TEXT,
     updated_at DATE
 ) ENGINE=InnoDB";
 
@@ -49,7 +50,7 @@ if (mysqli_query($conn, $sql)) {
 $sql = "CREATE TABLE IF NOT EXISTS payroll (
     id INT AUTO_INCREMENT PRIMARY KEY,
     emp_id INT NOT NULL,
-    original_salary DECIMAL(10,2) NOT NULL,
+    original_salary DECIMAL(10,2),
     absent_deductions decimal(10,2),
     actual_salary decimal(10,2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

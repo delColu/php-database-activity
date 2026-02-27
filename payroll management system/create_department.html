@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Department</title>
+</head>
+<body>
+    <h2>Create Department</h2>
+
+    <form method="POST" action="insert_department.php">
+        <label for="department_name">Department Name:</label>
+        <input type="text" name="department_name" id="department_name" required><br><br>
+
+        <label for="dep_head">Department Head:</label>
+        <input type="text" name="dep_head" id="dep_head" required><br><br>
+
+        <label for="employee_count">Employee Count:</label>
+        <input type="number" name="employee_count" id="employee_count" required><br><br>
+
+        <label for="dep_description">Department Description:</label>
+        <textarea name="dep_description" id="dep_description"></textarea><br><br>
+
+        <input type="submit" value="Create Department">
+    </form>
+</body>
+</html>
