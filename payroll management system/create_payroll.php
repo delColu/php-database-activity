@@ -1,3 +1,10 @@
+<?php
+include "db_connect.php";
+
+$sql = "SELECT emp_id, name FROM employees";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +26,10 @@
             <?php endwhile; ?>
         </select><br><br>
 
-        <label for="original_salary">Original Salary:</label>
-        <input type="number" step="0.01" name="original_salary" id="original_salary" required><br><br>
+        <label for="payment">Original Salary:</label>
+        <input type="number" step="0.01" name="payment" id="payment" required><br><br>
 
         <input type="submit" value="Add Payroll">
     </form>
 </body>
 </html>
-
-<?php
-include "db_connect.php";
-include "insert_payroll.php";
-
-$sql = "SELECT emp_id, name FROM employees";
-$result = mysqli_query($conn, $sql);
-
-?>

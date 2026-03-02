@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($conn);
 
     // Redirect
-    header("Location: view_payroll.php");
+    header("Location: veiw_payrolls.php");
     exit;
 }
 ?>
